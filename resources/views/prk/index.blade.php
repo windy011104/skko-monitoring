@@ -657,41 +657,41 @@
 
                                     {{-- DELETE --}}
                                     <form action="{{ route('prk.destroy', $prk->id) }}"
-                                        method="POST"
-                                        class="inline"
-                                        onsubmit="return confirm('Yakin ingin menghapus data PRK ini?')">
+    method="POST"
+    class="inline"
+    onsubmit="return openDeleteModal(this)">
 
-                                        @csrf
-                                        @method('DELETE')
+    @csrf
+    @method('DELETE')
 
-                                        <button type="submit"
-                                            title="Hapus"
-                                            class="inline-flex items-center justify-center gap-1.5
-                                                   px-3 py-2 rounded-lg
-                                                   bg-red-50 text-red-600
-                                                   text-xs font-semibold
-                                                   hover:bg-red-100 transition">
+    <button type="submit"
+        title="Hapus"
+        class="inline-flex items-center justify-center gap-1.5
+               px-3 py-2 rounded-lg
+               bg-red-50 text-red-600
+               text-xs font-semibold
+               hover:bg-red-100 transition">
 
-                                            <svg class="w-4 h-4"
-                                                fill="none"
-                                                stroke="currentColor"
-                                                viewBox="0 0 24 24">
+        <svg class="w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24">
 
-                                                <path stroke-linecap="round"
-                                                    stroke-linejoin="round"
-                                                    stroke-width="2"
-                                                    d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862
-                                                       a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6
-                                                       M9 7V4a1 1 0 011-1h4a1 1 0 011 1v3
-                                                       M4 7h16" />
+            <path stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862
+                   a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6
+                   M9 7V4a1 1 0 011-1h4a1 1 0 011 1v3
+                   M4 7h16" />
 
-                                            </svg>
+        </svg>
 
-                                            <span>Hapus</span>
+        <span>Hapus</span>
 
-                                        </button>
+    </button>
 
-                                    </form>
+</form>
 
                                 </div>
 
